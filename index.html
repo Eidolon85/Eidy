@@ -3,28 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Banana Fit - AI 虚拟换装</title>
+    <title>凯捷 × 百胜中国 · 人才智能推荐与发展平台</title>
+    <meta name="description" content="Capgemini Talent Intelligence Suite for Yum China — RFP 2026 交互式方案演示" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
     <style>
+      :root { color-scheme: light; }
       body {
-        font-family: 'Noto Sans SC', sans-serif;
-        background-color: #f8fafc;
+        font-family: 'Noto Sans SC', system-ui, -apple-system, sans-serif;
+        background-color: #f6f7fb;
+        -webkit-font-smoothing: antialiased;
       }
-      .card-tilt {
-        transform: perspective(1000px) rotateX(5deg) rotateY(-5deg);
-        transition: transform 0.5s ease;
+      .animate-fade-in {
+        animation: fade-in 0.4s ease-out;
       }
-      .card-tilt:hover {
-        transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1.02);
+      @keyframes fade-in {
+        from { opacity: 0; transform: translateY(8px); }
+        to   { opacity: 1; transform: translateY(0); }
       }
-      /* Hide scrollbar for gallery */
-      .no-scrollbar::-webkit-scrollbar {
-        display: none;
-      }
-      .no-scrollbar {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
+      /* Hide scrollbar for chips */
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      @media print {
+        header, footer, nav { display: none !important; }
+        body { background: white; }
       }
     </style>
   <script type="importmap">
